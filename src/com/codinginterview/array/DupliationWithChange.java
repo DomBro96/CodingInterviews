@@ -38,12 +38,19 @@ public class DupliationWithChange {
                     int duplication = numbers[i];
                     return duplication;
                 }
-
+                //交换 位置 i 和 位置 m 上的元素
                 int temp = numbers[i];
                 numbers[i] = numbers[temp];
                 numbers[temp] = temp;
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int[] numbers = {0, 1, 2, 2, 3, 4};
+        System.out.println(duplicate(numbers, numbers.length));
+
     }
 }
